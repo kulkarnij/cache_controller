@@ -36,7 +36,7 @@ way_match_rd:8 way_match_wr:0 hit:1 evict:0
 _____________________ cache_controller::check()__________________________________________________
 ********************* cache_controller::check()***************************************************
 Cycle:5 clk: 1 reset_n:1 ce:1 oe:1 we:0
-proc_address: 1431655765 din:5 dout:0 data_valid:1
+proc_address: 1431655765 din:5 dout:5 data_valid:0
  tag_value: 1365 tag_address:2730 evict_way:3
 read_operation:1 write_operation:0 lookup_cycle:1 update_cycle:1 snoop:8
 way_match_rd:8 way_match_wr:8 hit:1 evict:0
@@ -50,7 +50,7 @@ way_match_rd:8 way_match_wr:0 hit:1 evict:0
 _____________________ cache_controller::check()__________________________________________________
 ********************* cache_controller::check()***************************************************
 Cycle:7 clk: 1 reset_n:1 ce:1 oe:1 we:0
-proc_address: 1431655765 din:5 dout:0 data_valid:1
+proc_address: 1431655765 din:5 dout:5 data_valid:0
  tag_value: 1365 tag_address:2730 evict_way:3
 read_operation:1 write_operation:0 lookup_cycle:1 update_cycle:1 snoop:8
 way_match_rd:8 way_match_wr:8 hit:1 evict:0

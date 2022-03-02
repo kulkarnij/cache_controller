@@ -13,7 +13,7 @@ void data_memory::drive_data() { //registered dout.
 	if(!reset_n) {
 		data_valid.write(0);
 	}
-	else {
+	else if(read_operation) {
 		data_valid.write(hit);
 		if(snoop.read() != 0) {
 			dout = din_wr;
@@ -31,6 +31,9 @@ void data_memory::drive_data() { //registered dout.
 		else { // cache miss
 			data_valid.write(0);
 		}
+	}
+	else { // not a read_opaeration
+		data_valid.write(0);
 	}
 }
 
