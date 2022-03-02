@@ -22,12 +22,12 @@ Eviction policy is determined by the data_memory module based on the constant EV
 An important point to note is that we do not assume that memories can be initialized at reset. We do not know if any of the cache is filled, so all are asssumed to have valid data. It is expected that the cache will fill itself since the input and the eviction policy is random enough to evict all ways after a few writes.
 
 # Code Status
-The code at this point represents 1 day of effort. It compiles using the supplied makefile with systemc complied with C++11 support. One test that evicts a way and then populates and reads from it is passing.  Sample output is included in sample_out.txt. There is plenty of room for improvment.
+The code at this point represents 1 day of effort. It compiles using the supplied makefile with systemc complied with C++11 support and generated the output file "out". One test that evicts a way and then populates and reads from it is passing.   Sample output is included in sample_out.txt. There is plenty of room for improvment.
 
 # Future Improvements
 
-1> Consider maintaining valid bits so that initial reads are valid.
-2> Test for conditions such as chip enable controlled operations, constrained random inputs and lot more functional testing.
-3> Add vcd dump file which was not done due to time constraints.
+*Consider maintaining valid bits so that initial reads are valid.
+*Test for conditions such as chip enable controlled operations, constrained random inputs and lot more functional testing.
+*Add vcd dump file which was not done due to time constraints.
 
 
