@@ -1,0 +1,13 @@
+#include "data_memory_tb.h"
+
+void data_memory_tb::simple_write_read1() {
+	cout<<"Here"<<endl;
+	oe=0;
+	ce=1;
+	address = 1;
+	din=0X5;
+	we=1;
+	//next_trigger();
+	we=0;
+	oe=1;
+}

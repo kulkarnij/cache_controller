@@ -1,0 +1,57 @@
+********************* cache_controller::check()***************************************************
+Cycle:0 clk: 1 reset_n:0 ce:0 oe:0 we:0
+proc_address: 0 din:0 dout:0 data_valid:0
+ tag_value: 0 tag_address:0 evict_way:0
+read_operation:0 write_operation:0 lookup_cycle:0 update_cycle:0 snoop:0
+way_match_rd:0 way_match_wr:0 hit:0 evict:0
+_____________________ cache_controller::check()__________________________________________________
+cache_controller_tb::evict_once_then_update: Write followed by read operations to the same address result in eviction the first time in cycle 3 then updates w/o eviction. Observe snoop since the same address is also being looked up and updated.
+********************* cache_controller::check()***************************************************
+Cycle:1 clk: 1 reset_n:0 ce:0 oe:0 we:0
+proc_address: 0 din:0 dout:0 data_valid:0
+ tag_value: 0 tag_address:0 evict_way:0
+read_operation:0 write_operation:0 lookup_cycle:0 update_cycle:0 snoop:0
+way_match_rd:0 way_match_wr:0 hit:0 evict:0
+_____________________ cache_controller::check()__________________________________________________
+********************* cache_controller::check()***************************************************
+Cycle:2 clk: 1 reset_n:1 ce:1 oe:0 we:1
+proc_address: 1431655765 din:5 dout:0 data_valid:0
+ tag_value: 1365 tag_address:2730 evict_way:3
+read_operation:0 write_operation:1 lookup_cycle:1 update_cycle:0 snoop:0
+way_match_rd:0 way_match_wr:0 hit:0 evict:0
+_____________________ cache_controller::check()__________________________________________________
+********************* cache_controller::check()***************************************************
+Cycle:3 clk: 1 reset_n:1 ce:1 oe:1 we:0
+proc_address: 1431655765 din:5 dout:0 data_valid:0
+ tag_value: 1365 tag_address:2730 evict_way:3
+read_operation:1 write_operation:0 lookup_cycle:1 update_cycle:1 snoop:8
+way_match_rd:8 way_match_wr:8 hit:1 evict:1
+_____________________ cache_controller::check()__________________________________________________
+********************* cache_controller::check()***************************************************
+Cycle:4 clk: 1 reset_n:1 ce:1 oe:0 we:1
+proc_address: 1431655765 din:5 dout:5 data_valid:1
+ tag_value: 1365 tag_address:2730 evict_way:3
+read_operation:0 write_operation:1 lookup_cycle:1 update_cycle:0 snoop:0
+way_match_rd:8 way_match_wr:0 hit:1 evict:0
+_____________________ cache_controller::check()__________________________________________________
+********************* cache_controller::check()***************************************************
+Cycle:5 clk: 1 reset_n:1 ce:1 oe:1 we:0
+proc_address: 1431655765 din:5 dout:0 data_valid:1
+ tag_value: 1365 tag_address:2730 evict_way:3
+read_operation:1 write_operation:0 lookup_cycle:1 update_cycle:1 snoop:8
+way_match_rd:8 way_match_wr:8 hit:1 evict:0
+_____________________ cache_controller::check()__________________________________________________
+********************* cache_controller::check()***************************************************
+Cycle:6 clk: 1 reset_n:1 ce:1 oe:0 we:1
+proc_address: 1431655765 din:5 dout:5 data_valid:1
+ tag_value: 1365 tag_address:2730 evict_way:3
+read_operation:0 write_operation:1 lookup_cycle:1 update_cycle:0 snoop:0
+way_match_rd:8 way_match_wr:0 hit:1 evict:0
+_____________________ cache_controller::check()__________________________________________________
+********************* cache_controller::check()***************************************************
+Cycle:7 clk: 1 reset_n:1 ce:1 oe:1 we:0
+proc_address: 1431655765 din:5 dout:0 data_valid:1
+ tag_value: 1365 tag_address:2730 evict_way:3
+read_operation:1 write_operation:0 lookup_cycle:1 update_cycle:1 snoop:8
+way_match_rd:8 way_match_wr:8 hit:1 evict:0
+_____________________ cache_controller::check()__________________________________________________
