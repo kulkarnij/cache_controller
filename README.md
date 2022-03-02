@@ -26,8 +26,8 @@ The code at this point represents 1 day of effort. It compiles using the supplie
 
 # Future Improvements
 
-*Consider maintaining valid bits so that initial reads are valid.
-*Test for conditions such as chip enable controlled operations, constrained random inputs and lot more functional testing.
-*Add vcd dump file which was not done due to time constraints.
+- Consider maintaining valid bits so that initial reads are valid.
+- Test for conditions such as chip enable controlled operations, constrained random inputs and lot more functional testing.
+- Add vcd dump file which was not done due to time constraints.
 
 
